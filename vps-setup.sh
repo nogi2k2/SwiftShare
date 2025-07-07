@@ -22,10 +22,6 @@ sudo npm install -g pm2
 echo "Installing Maven"
 sudo apt install -y maven
 
-echo "Cloning repository"
-git clone https://github.com/nogi2k2/SwiftShare.git
-cd SwiftShare
-
 echo "Building Java Backend"
 mvn clean package
 
