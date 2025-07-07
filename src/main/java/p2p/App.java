@@ -19,6 +19,7 @@ public class App {
 
             System.out.println("Press Enter to shutdown the server");
             System.in.read();
+            fileController.stop();
 
         } catch (IOException e) {
             System.err.println("Error starting Server: " + e.getMessage());
