@@ -3,7 +3,7 @@ set -e
 echo "Running Service setup script"
 
 echo "Updating system packages"
-sudp apt update
+sudo apt update
 sudo apt upgrade -y
 
 echo "Installing Java"
@@ -17,7 +17,7 @@ echo "Installing nginx"
 sudo apt install -y nginx
 
 echo "Installing pm2"
-sudp npm install -g pm2
+sudo npm install -g pm2
 
 echo "Installing Maven"
 sudo apt install -y maven
@@ -78,7 +78,6 @@ server {
 }
 EOF
 
-
 sudo ln -sf /etc/nginx/sites-available/swiftshare /etc/nginx/sites-enabled/swiftshare
 
 sudo nginx -t
@@ -86,7 +85,7 @@ if [ $? -eq 0 ]; then
     sudo systemctl restart nginx
     echo "Nginx configured and restarted successfully."
 else
-    echo "Nginx configuration test failed. Please check /etc/nginx/nginx.conf and /etc/nginx/sites-available/peerlink."
+    echo "Nginx configuration test failed. Please check /etc/nginx/nginx.conf and /etc/nginx/sites-available/swiftshare."
     exit 1
 fi
 
