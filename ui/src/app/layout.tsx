@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'PeerLink - P2P File Sharing',
-  description: 'Securely share files peer-to-peer',
+  title: 'SwiftShare',
+  description: 'Secure P2P File Sharing',
 }
 
 export default function RootLayout({
